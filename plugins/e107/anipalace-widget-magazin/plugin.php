@@ -18,5 +18,8 @@ $eplug_compliant = TRUE;
 
 $eplug_caption = "AniPalace";
 
-$eplug_done = "Installation Successful...";
+// nem kell státusz követés az adminban
+$eplug_status = false;
+// nem kell linket kirakni
+$eplug_link = false;
 ?>
