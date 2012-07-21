@@ -1,11 +1,23 @@
-AniPalace Widget-Magazin
-========================
-
+# AniPalace Widget-Magazin
 Egy egyszerű JavaScript függvény, amely azt a célt szolgálja, hogy az AniPalace weboldaláról lekérdezzen adatokat, majd azokat megjelenítse.
 Ennek a widget-nek a segítségével könnyen és gyorsan meg lehet jeleníteni a legújabb magazin és podcast megjelenéseket.
 
-Használat
----------
+## Használat
+A widget egy JavaScript függvényből áll, amit az anipalace-widget-magazin.js vagy a aniapalce-widget-magazin.min.js ( minimalizált )
+fileok tartalmaznak. A máködéshez elég csak az egyiket használni! Ajánlott a minimalizált verzió!
+
+Amennyiben nem ezt a verziót akarjuk használni, hanem a megtalálható cms pluginok közül valamelyiket, akkor a használat előtt
+át kell másolni az egyik JavaScript állományt az adott plugin könyvtárába. Amennyiben a minimalizált verziót használjuk, akkor
+át kell nevezni azt anipalace-widget-magazin.js-re.
+Miután ezzel megvagyunk át kell másolni az adott rendszer plugins/module/widget mappájába a könyvtárt és az adott rendszernek
+megfelelően telepíteni kell azt.
+
+#### Példa e107-ez:
+Az e107 plugin megtalálható a plugins/e107 könyvtárban. Az itt található mappába kell bemásolni a anipalace-widget-magazin.js filet
+majd az egész mappát átmásolni az e107 rendszer plugins mappájába.
+
+### JavaScript változat:
+Ez az alapértelmezett változat, tapasztaltabb felhasználóknak, vagy azoknak akik egyedi rendszert építenek.
 
 Az alábbi code részletet helyezzük el az oldalunk fejlécében:
 ```html
@@ -21,10 +33,10 @@ Majd ahol szeretnénk megjeleníteni a legujabb magazint:
 ```
 
 
-Changelog
----------
 
-- 2012.07.21 =RedGrape= ( v1.0 )
+## Changelog
+
+### 2012.07.21 =RedGrape= ( v1.0 )
 	- Init
 	- Egyszerű demo
 	- Nagyon egyszerű lekérdezés
