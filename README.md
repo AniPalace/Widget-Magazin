@@ -9,16 +9,16 @@ Használat
 
 Az alábbi code részletet helyezzük az oldalunk fejlécében:
 <code>
-<script type="text/javascript" src='anipalace-widget.js'></script>
-<script type="text/javascript">
-	getAniPalaceWidgetMagazin( "demo/json.php" );
-</script>
+	<script type="text/javascript" src='anipalace-widget.js'></script>
+	<script type="text/javascript">
+		getAniPalaceWidgetMagazin( "demo/json.php" );
+	</script>
 </code>
 
 Majd ahol szeretnénk megjeleníteni a legujabb magazin képét:
 <code>
-<div class='anipalace-widget' data-type='animagazin'> 
-</div>
+	<div class='anipalace-widget' data-type='animagazin'> 
+	</div>
 </code>
 
 Changelog
