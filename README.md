@@ -8,12 +8,12 @@ Használat
 ---------
 
 Az alábbi code részletet helyezzük az oldalunk fejlécében:
->
->	<script type="text/javascript" src='anipalace-widget.js'></script>
->	<script type="text/javascript">
->		getAniPalaceWidgetMagazin( "demo/json.php" );
->	</script>
->
+```html
+	<script type="text/javascript" src='anipalace-widget.js'></script>
+	<script type="text/javascript">
+		getAniPalaceWidgetMagazin( "demo/json.php" );
+	</script>
+```
 
 Majd ahol szeretnénk megjeleníteni a legujabb magazin képét:
 ```html
