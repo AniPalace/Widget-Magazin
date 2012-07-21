@@ -16,10 +16,11 @@ Az alábbi code részletet helyezzük az oldalunk fejlécében:
 >
 
 Majd ahol szeretnénk megjeleníteni a legujabb magazin képét:
->
->	<div class='anipalace-widget' data-type='animagazin'> 
->	</div>
->
+```html
+    <div class='anipalace-widget' data-type='animagazin'> 
+    </div>
+```
+
 
 Changelog
 ---------
