@@ -1,11 +1,18 @@
 <?php
-
-$eplug_name = "AniPalace Widget-Magazin";
+/**
+ * AniPalace Widget-Magazin e107 plugin
+ * 
+ * @link https://github.com/AniPalace/Widget-Magazin
+ * @author NewPlayer
+ * 
+ */
+ 
+$eplug_name = "AniPalace Widget-Magazin e107 plugin";
 $eplug_version = "1.0";
 $eplug_url = "https://github.com/AniPalace/Widget-Magazin";
 
 $eplug_description = "AniMagazin és AniStation widget megjelenítő.";
-$eplug_readme = "https://github.com/AniPalace/Widget-Magazin/blob/master/README.md";
+$eplug_readme = "readme.php";
 
 $eplug_author = "NewPlayer";
 $eplug_email = "newplayer@anipalace.hu";
@@ -18,8 +25,6 @@ $eplug_compliant = TRUE;
 
 $eplug_caption = "AniPalace";
 
-// nem kell státusz követés az adminban
 $eplug_status = false;
-// nem kell linket kirakni
 $eplug_link = false;
 ?>
