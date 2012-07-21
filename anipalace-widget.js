@@ -67,7 +67,7 @@ function getAniPalaceWidgetMagazin( url ) {
         }
         
         // várunk egy picit hátha betöltődik, majd meghívjuk újra a függvényt
-        setTimeout("AniPalaceWidget()", 100);
+        setTimeout("getAniPalaceWidgetMagazin()", 100);
         
     } else {
 
