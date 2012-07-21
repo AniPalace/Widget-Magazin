@@ -7,18 +7,17 @@ Ennek a widget-nek a segítségével könnyen és gyorsan meg lehet jeleníteni 
 Használat
 ---------
 
-Az alábbi code részletet helyezzük az oldalunk fejlécében:
+Az alábbi code részletet helyezzük el az oldalunk fejlécében:
 ```html
-	<script type="text/javascript" src='anipalace-widget.js'></script>
-	<script type="text/javascript">
-		getAniPalaceWidgetMagazin( "demo/json.php" );
-	</script>
+<script type="text/javascript" src='anipalace-widget.js'></script>
+<script type="text/javascript">
+	getAniPalaceWidgetMagazin( );
+</script>
 ```
 
-Majd ahol szeretnénk megjeleníteni a legujabb magazin képét:
+Majd ahol szeretnénk megjeleníteni a legujabb magazint:
 ```html
-    <div class='anipalace-widget' data-type='animagazin'> 
-    </div>
+<div class='anipalace-widget' data-type='animagazin'></div>
 ```
 
 
