@@ -1,31 +1,54 @@
 /**
- * AniPalace Widget
- * @version RedGrape
- * @site http://code.google.com/p/anipalace-widget/
+ * AniPalace Widget-Magazin
+ * 
+ * Az AniPalace.hu-hoz írt adat lekérdező és megjelenítő.
+ * Egy adott url-ből lekérdez egy json-t ami alapján az oldalon előre meghatározott helyeken megjeleníti a kapott értékeket.
+ * Első sorban arra szolgál, hogy az AniMagazin-t meg tudjuk fele jeleníteni más oldalakon.
+ * 
+ * @version RedGrape ( 1.0 )
+ * @link https://github.com/AniPalace/Widget-Magazin
  * 
  * @author NewPlayer
- * @site http://anipalace.hu/
+ * @link http://anipalace.hu/
  * 
  */
 
+/**
+ * @var {Boolean} [jQueryScriptOutputted] jQuery script meghívásakor használt állapotjelző
+ */
 var jQueryScriptOutputted = false;
+/**
+ * @var {String} [target_url] A json file forrásának url-je
+ */
 var target_url = undefined;
 
 /**
- * A függvény, ismétlem: _A_ függvény 
+ * Construktor script, ami lekérdezi az információkat
+ * 
+ * @constructor
+ * @param {String} [url] A json file helye ( elsősorban fejlesztéshez ) 
+ * 
  */
-function AniPalaceWidget( url ) {
+function getAniPalaceWidgetMagazin( url ) {
 	
-	// megnézzük, hogy adtunk-e át url-t
-	if( url != "" ){
+	//TODO: valamilyen locális cache-t használni, hogy kíméljük a szervert. Esetleg Cookiek?
+	
+	// ezt későbbre tartogatjuk, esetleg mikor majd külön be lehet állítani az url-t
+	if( target_url == undefined ){
 		
-		// ezt későbbre tartogatjuk, esetleg mikor majd külön be lehet állítani az url-t
-		if( target_url == undefined ){
-		
-			target_url = url;
-				
-		}
+		// megnézzük, hogy adtunk-e át url-t
+		if( url != "" ){
 			
+			// használjuk a paraméterben megkapott értéket
+			target_url = url;
+			
+		}else{
+			
+			// nem adunk és még nincs is beállítva url, így beállítjuk az alapértelmezettet
+			 target_url = "http://anipalace.hu/json/Widget-Magazin.json";
+			
+		}
+		
 	}
 	
     //Vajon a jQuery elérhető-e?
@@ -51,16 +74,11 @@ function AniPalaceWidget( url ) {
         // és be van töltve \o/
     	// jQuery-t használunk a $- helyett hogy mindenhol tuti jól működjön pl: wordpress
         jQuery( function() {  
-        	
-            // megnézzük, hogy van-e paraméterben átadva url
-            if( target_url == "" ){
-            	
-            	target_url = "http://anipalace.hu/json/Widget-Magazin.json";
-            	
-            }
-            
+
         	jQuery.post(
+        		
         		target_url,
+        		
         		function( data ){
         			
         			var obj = jQuery.parseJSON( data );
